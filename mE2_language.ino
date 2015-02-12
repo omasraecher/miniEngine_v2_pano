@@ -570,4 +570,4 @@ const char* string_229_long = "motor exceeded for this move!";
 const char* string_230_long = "Preview";
 const char* string_231_long = "The timelpase preview is now";
 const char* string_232_long = "done in real-speed...";
-
+#endif

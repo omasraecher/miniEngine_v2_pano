@@ -23,4 +23,5 @@
 #define PANO_MODE_MAN  B00000010
 
 uint8_t pano_mode   = PANO_MODE_AUTO;
-
+uint16_t h_angle	= 360;
+uint16_t v_angle	= 180;
