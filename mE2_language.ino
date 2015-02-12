@@ -545,11 +545,11 @@ const char* string_200_long = "Die Gesamtstrecke des Motors\waehrend der Aufnahm
 const char* string_201_long = "Die Motor Drehrichtung.";
 const char* string_202_long = "Die Kamera Ausloesezeit. Diese kann \nvon 1/10 nur zum Ausloesen der \nKamera betragen. Die wirkliche Ausloesezeit\nwird in der Kamera definiert (siehen ebenso \nKamera Verzoegerung nach Ausloesung)";
 const char* string_203_long = "Die Gesamtaufnahmezeit.";
-const char* string_204_long = "Die Laenge des Clips der erststellt werden soll.";
+const char* string_204_long = "Die Laenge des Clips der erstellt werden soll.";
 const char* string_205_long = "Frames pro Sekunde vom finalen Clip.\nDies beeinflusst wieviele Fotos\n gemacht werden.";
-const char* string_206_long = "Percent of record-time to ramp into\nthe move.";
-const char* string_207_long = "Percent of record-time to ramp out\nof the move.";
-const char* string_209_long = "Focus Lenght of your lens";
+const char* string_206_long = "Prozent der Aufnahmezeit\n fuer die Rampe rein.";
+const char* string_207_long = "Prozent der Aufnahmezeit\n fuer die Rampe raus.";
+const char* string_209_long = "Focus Einstellung deines Objektives";
 
 
 ////////////////////////////////////////////////////////
@@ -557,17 +557,17 @@ const char* string_209_long = "Focus Lenght of your lens";
 
 
 const char* string_220_long = "Trigger";
-const char* string_221_long = "Waiting for the start-signal.";
-const char* string_222_long = "Press [SELECT] to abort.";
+const char* string_221_long = "Warte auf das Start-Signal.";
+const char* string_222_long = "Druecke [SELECT] um abzubrechen.";
 
-const char* string_225_long = "Home";
-const char* string_226_long = "Moving motors to the home-position.";
+const char* string_225_long = "Start";
+const char* string_226_long = "Bewege Motoren zur Startposition.";
 
-const char* string_227_long = "Speed warning";
-const char* string_228_long = "Motor-speed limit for at least one";
-const char* string_229_long = "motor exceeded for this move!";
+const char* string_227_long = "Geschwindigkeits Warnung";
+const char* string_228_long = "Motor Geschwindigkeitslimit fuer mindestens einen";
+const char* string_229_long = "Motor ueberschritten fuer diese Bewegung!";
 
-const char* string_230_long = "Preview";
-const char* string_231_long = "The timelpase preview is now";
-const char* string_232_long = "done in real-speed...";
+const char* string_230_long = "Vorschau";
+const char* string_231_long = "Die Timelpase Vorschau wurde nun ";
+const char* string_232_long = "gemacht in Echtzeit...";
 #endif
