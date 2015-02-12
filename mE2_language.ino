@@ -541,7 +541,7 @@ const char* string_207_short = "Ramp Raus";
 const char* string_209_short = "Focus";
 
 
-const char* string_200_long = "Die Gesamtstrecke des Motors\waehrend der Aufnahme.\nDruecke [Menue] um die Granularitaet zu aendern.";
+const char* string_200_long = "Die Gesamtstrecke des Motors\nwaehrend der Aufnahme.\nDruecke [Menue] um die Granularitaet zu aendern.";
 const char* string_201_long = "Die Motor Drehrichtung.";
 const char* string_202_long = "Die Kamera Ausloesezeit. Diese kann \nvon 1/10 nur zum Ausloesen der \nKamera betragen. Die wirkliche Ausloesezeit\nwird in der Kamera definiert (siehen ebenso \nKamera Verzoegerung nach Ausloesung)";
 const char* string_203_long = "Die Gesamtaufnahmezeit.";
