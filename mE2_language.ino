@@ -50,12 +50,6 @@ const char* string_23_short  = "empty";
 const char* string_24_short  = "Running...";
 const char* string_25_short  = "Frames";
 const char* string_26_short  = "Interval";
-const char* string_504_short  = "Auto";
-const char* string_505_short  = "Manual";
-
-
-
-
 
 const char* string_27_short  = "Mode";
 const char* string_28_short  = "Battery";
@@ -345,8 +339,7 @@ const char* string_25_short  = "Frames";
 const char* string_26_short  = "Interval";
 const char* string_27_short  = "Modus";
 const char* string_28_short  = "Batterie";
-const char* string_504_short  = "Auto";
-const char* string_505_short  = "Manual";
+
 
 
 ////////////////////////////////////////////////////////
@@ -355,7 +348,7 @@ const char* string_505_short  = "Manual";
 const char* string_30_short = "SMS";
 const char* string_31_short = "Dauer";
 
-const char* string_30_long = "Ausloesung-Bewegung-Ausloesung";
+const char* string_30_long = "Ausl-Beweg-Ausl";
 const char* string_31_long = "Dauer-Modus";
 
 
@@ -395,8 +388,6 @@ const char* string_95_short = "MOT";
 const char* string_96_short = "DCH";  
 const char* string_97_short = "TRG";  
 const char* string_98_short = "Batterie:"; 
- 
-
 const char* string_99_short = "PAN";  
 
 const char* string_93_long = "         Grund";  
@@ -423,7 +414,7 @@ const char* string_111_short = "Beweg. Art";
 const char* string_112_short = "Zuruecksetzen";
 
 
-const char* string_100_long  = "Helligkeit des Hintergrundlichts.\nEinstellungen ueber 100% sind ueber\n5V und ueber den Spezifikationen von dem\n Display (Übersteuern)!";
+const char* string_100_long  = "Helligkeit des Hintergrundlichts.\nEinstellungen ueber 100% sind ueber\n5V und ueber den Spezifikationen von dem\n Display (Uebersteuern)!";
 const char* string_101_long  = "Zeit nach der das Hintergrundlicht\n aus geht.";
 const char* string_102_long  = "Das Grundfarbschema.\nBenutze dies\n um die Lesbarkeit des Displays\nsicherzustellen.";
 const char* string_103_long  = "Dreht die Richtung des\nDrehknopfs um.";
@@ -511,21 +502,51 @@ const char* string_187_long  = "Glaettet das Trigger Signal via\nSoftware wenn e
 // 2015-02-11 CH Add text for pano settings
 ////////////////////////////////////////////////////////
 // SETTINGS PANORAMA
-const char* string_600_short = "Pano Modus";
-const char* string_601_short = "V-Winkel";
-const char* string_602_short = "H-Winkel";
 
-const char* string_600_long = "Panorama Modus Auto oder Manuell";
-const char* string_601_long = "Vertikaler Winkel";
-const char* string_602_long = "Horizontaler Winkel";
+const char* string_240_short = "Auto";
+const char* string_241_short = "Manuell";
+const char* string_242_short = "Pano Modus";
+const char* string_243_short = "V-Winkel";
+const char* string_244_short = "H-Winkel";
+const char* string_245_short = "Focal L.";
+const char* string_246_short = "Modus";
+const char* string_247_short = "Dir Vert";
+const char* string_248_short = "Dir Hori";
+const char* string_249_short = "CCD Width";
+const char* string_250_short = "CCD Heigth";
+const char* string_251_short = "Cam Orien";
+const char* string_252_short = "Portrait";
+const char* string_253_short = "Normal";
+const char* string_254_short = "Mosaik";
+const char* string_255_short = "mm";
+const char* string_239_short = "Landsc";
+const char* string_238_short = "Cropfac.";
+const char* string_237_short = "VertiMot";
+const char* string_236_short = "HorzMot";
+const char* string_235_short = "Cropfac. Wert?";
 
-////////////////////////////////////////////////////////
-// Pano mode settings
-const char* string_700_short = "Auto";
-const char* string_701_short = "Manuell";
 
-const char* string_700_long = "Automatischer Modus";
-const char* string_701_long = "Manueller Modus";
+const char* string_240_long = "Automatischer Modus\n 180° vertikal 360° Horizontal\incl. Nadir und Zenith\n Start ist Nadir";
+const char* string_241_long = "Manueller Modus\n alle Setting müssen von Hand gemacht werden.";
+const char* string_242_long = "Panorama Modus Auto oder Manuell";
+const char* string_243_long = "Vertikaler Winkel\n der abgefahren werden soll.";
+const char* string_244_long = "Horizontaler Winkel\n der abgefahren werden soll.";
+const char* string_245_long = "Focus Laenge\n Empfehlung ist Festbrennweite\nansonsten mach ein Testbild und schaue\n in die Exif Daten.";
+const char* string_246_long = "Panorama Aufnahme Modus\n Mosaik oder Normal";
+const char* string_247_long = "Drehrichtung\nVertikaler Motor\n Im oder gegen den Uhrzeigersinn.";
+const char* string_248_long = "Drehrichtung\nHorizontaler Motor\n Im oder gegen den Uhrzeigersinn.";
+const char* string_249_long = "CCD Breite\ngemessen wir diese im Querformat\n und ist groesser als die Hoehe";
+const char* string_250_long = "CCD Hoehe\n gemessen wird diese im Querformat\n und ist kleiner als die Breite.";
+const char* string_251_long = "Kamera Ausrichtung\n wie ist deine Kamera montiert.";
+const char* string_252_long = "Ausrichtung der Kamera\n auf deinem Panokopf ist\ Portrait\n also Hochformat";
+const char* string_253_long = "Normaler Pano Modus\nDas Panorama wird Zeilenweise\n abgefahren.";
+const char* string_254_long = "Mosaik\nDas Panorama wird Spaltenweise\n abgefahren, nicht\n Zeilenweise.";
+const char* string_255_long = "Millimeter";
+const char* string_239_long = "Ausrichtung der Kamera\n auf deinem Panokopf ist\ Landscape\n also Querformat";
+const char* string_238_long = "Cropfaktor deiner Kamera\n z.B. Canon 1.6\n oder Nikon 1.5";
+const char* string_237_long = "Horizontaler Motor";
+const char* string_236_long = "Vertikaler Motor";
+const char* string_235_long = "Wert des Cropfaktor ";
 
 ////////////////////////////////////////////////////////
 // mode settings
@@ -538,10 +559,10 @@ const char* string_204_short = "Wiederg. Zeit";
 const char* string_205_short = "Bilder pro Sek";
 const char* string_206_short = "Ramp Rein";
 const char* string_207_short = "Ramp Raus";
-const char* string_209_short = "Focus";
 
 
-const char* string_200_long = "Die Gesamtstrecke des Motors\nwaehrend der Aufnahme.\nDruecke [Menue] um die Granularitaet zu aendern.";
+
+const char* string_200_long = "Die Gesamtstrecke des Motors\nwaehrend der Aufnahme.\nDruecke [Menue] um die \nGranularitaet zu aendern.";
 const char* string_201_long = "Die Motor Drehrichtung.";
 const char* string_202_long = "Die Kamera Ausloesezeit. Diese kann \nvon 1/10 nur zum Ausloesen der \nKamera betragen. Die wirkliche Ausloesezeit\nwird in der Kamera definiert (siehen ebenso \nKamera Verzoegerung nach Ausloesung)";
 const char* string_203_long = "Die Gesamtaufnahmezeit.";
@@ -549,7 +570,7 @@ const char* string_204_long = "Die Laenge des Clips der erstellt werden soll.";
 const char* string_205_long = "Frames pro Sekunde vom finalen Clip.\nDies beeinflusst wieviele Fotos\n gemacht werden.";
 const char* string_206_long = "Prozent der Aufnahmezeit\n fuer die Rampe rein.";
 const char* string_207_long = "Prozent der Aufnahmezeit\n fuer die Rampe raus.";
-const char* string_209_long = "Focus Einstellung deines Objektives";
+
 
 
 ////////////////////////////////////////////////////////
