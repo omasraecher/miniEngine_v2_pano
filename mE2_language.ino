@@ -444,7 +444,7 @@ const char* string_101_long  = "Zeit nach der das Hintergrundlicht\naus geht.";
 const char* string_102_long  = "Das Grundfarbschema.\nBenutze dies um die\nLesbarkeit des Displays\nsicherzustellen.";
 const char* string_103_long  = "Dreht die Richtung des\nDrehknopfs um.";
 const char* string_107_long  = "Bewege alle Motoren zu Startposition\nbevor das Programm startet.\nDies hat nur Auswirkung auf \nmanuelle Programme.";
-const char* string_108_long  = "Die Aufnahmeart\nTimelapse oder Video.";
+const char* string_108_long  = "Die Aufnahmeart\nTimelapse, Video oder Panorama.";
 
 const char* string_109_long  = "Die Art der Bewegungen sind\ndefiniert 'Software' benoetigt\neine Verbindung zu einem Computer!";
 const char* string_110_long  = "Die Schriftart die benutzt werden soll";
@@ -545,15 +545,15 @@ const char* string_253_short = "Normal";
 const char* string_254_short = "Mosaik";
 const char* string_255_short = "mm";
 const char* string_239_short = "Landsc";
-const char* string_238_short = "Cropfac.";
+const char* string_238_short = "Cropfactor";
 const char* string_237_short = "VertiMot";
 const char* string_236_short = "HorzMot";
 const char* string_235_short = "Cropfac. Wert?";
 
 
-const char* string_240_long = "Automatischer Modus\n180 vertikal 360 Horizontal\nincl. Nadir und Zenith\n Start ist Nadir";
-const char* string_241_long = "Manueller Modus\nalle Setting müssen von\nHand gemacht werden.";
-const char* string_242_long = "Panorama Modus\nAuto oder Manuell";
+const char* string_240_long = "Auto";
+const char* string_241_long = "Manuell";
+const char* string_242_long = "Panorama Modus Auto oder Manuell\nAutomatischer Modus 180 vertikal\n360 Horizontal incl. Nadir und Zenith\nStart ist Nadir. Manueller Modus alle\nSetting muessen von Hand gemacht werden.";
 const char* string_243_long = "Vertikaler Winkel\nder abgefahren werden soll.";
 const char* string_244_long = "Horizontaler Winkel\nder abgefahren werden soll.";
 const char* string_245_long = "Focus Laenge\nEmpfehlung ist Festbrennweite\nansonsten mach ein Testbild und schaue\nin die Exif Daten.";

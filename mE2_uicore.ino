@@ -2443,26 +2443,28 @@ void uicore_generateDataString(uint16_t line_code) {
                     if (isBit(key, KEY_UP)) {
                       
                      if      (isBit(pano_mode, PANO_MODE_AUTO))   pano_mode = PANO_MODE_MAN; 
-                     else if (isBit(pano_mode, PANO_MODE_MAN))       pano_mode = PANO_MODE_AUTO;                                                                   
+                     else if (isBit(pano_mode, PANO_MODE_MAN))    pano_mode = PANO_MODE_AUTO;                                                                   
                     }
                    
                     if (isBit(key, KEY_DOWN)) {
                       
                       if      (isBit(core_mode, PANO_MODE_AUTO))   pano_mode = PANO_MODE_MAN; 
-                      else if (isBit(core_mode, PANO_MODE_MAN))       pano_mode = PANO_MODE_AUTO;                       
+                      else if (isBit(core_mode, PANO_MODE_MAN))    pano_mode = PANO_MODE_AUTO;                       
                     }
                                              
                     sd_setSettingsChangedFlag();  
                                         
                     // show the long strings when in editing mode
-                    if      (isBit(pano_mode, PANO_MODE_AUTO)) strcpy(data_line, string_240_long);
-                    else if (isBit(pano_mode, PANO_MODE_MAN))     strcpy(data_line, string_241_long);
+                   if      (isBit(pano_mode, PANO_MODE_AUTO)) strcpy(data_line, string_240_long);
+                   else if (isBit(pano_mode, PANO_MODE_MAN))  strcpy(data_line, string_241_long); 
+ 
                     
                   } else {
                    
                    // show the short strings when in editing mode 
-                   if      (isBit(pano_mode, PANO_MODE_AUTO)) strcpy(data_line, string_240_short);
-                   else if (isBit(pano_mode, PANO_MODE_MAN))     strcpy(data_line, string_241_short);                     
+                   
+					if      (isBit(pano_mode, PANO_MODE_AUTO)) strcpy(data_line, string_240_short);
+                    else if (isBit(pano_mode, PANO_MODE_MAN))  strcpy(data_line, string_241_short);				   
                   }
 				    break; 
  
