@@ -818,6 +818,7 @@ void uicore_getLongString(uint16_t buf_number) {
     case 94: strcpy(data_line, string_94_long);       return;
     case 95: strcpy(data_line, string_95_long);       return;
     case 96: strcpy(data_line, string_96_long);       return;
+	case 99: strcpy(data_line, string_99_long);       return;
     
     ///////////////////////////////////////////////////////////////////
     // SETTINGS GENERAL
@@ -2435,8 +2436,133 @@ void uicore_generateDataString(uint16_t line_code) {
                   
                    break; 
     }
-    
-    
+	 //2015-02-11 CH Added Pano Mode Options 
+    case 242 : {
+                  if (menu_editing) {
+                    
+                    if (isBit(key, KEY_UP)) {
+                      
+                     if      (isBit(pano_mode, PANO_MODE_AUTO))   pano_mode = PANO_MODE_MAN; 
+                     else if (isBit(pano_mode, PANO_MODE_MAN))       pano_mode = PANO_MODE_AUTO;                                                                   
+                    }
+                   
+                    if (isBit(key, KEY_DOWN)) {
+                      
+                      if      (isBit(core_mode, PANO_MODE_AUTO))   pano_mode = PANO_MODE_MAN; 
+                      else if (isBit(core_mode, PANO_MODE_MAN))       pano_mode = PANO_MODE_AUTO;                       
+                    }
+                                             
+                    sd_setSettingsChangedFlag();  
+                                        
+                    // show the long strings when in editing mode
+                    if      (isBit(pano_mode, PANO_MODE_AUTO)) strcpy(data_line, string_240_long);
+                    else if (isBit(pano_mode, PANO_MODE_MAN))     strcpy(data_line, string_241_long);
+                    
+                  } else {
+                   
+                   // show the short strings when in editing mode 
+                   if      (isBit(pano_mode, PANO_MODE_AUTO)) strcpy(data_line, string_240_short);
+                   else if (isBit(pano_mode, PANO_MODE_MAN))     strcpy(data_line, string_241_short);                     
+                  }
+				    break; 
+ 
+    } 
+                  
+    case 243 :  { 
+					if ((menu_editing) &&
+                       (isBit(key, KEY_UP) || isBit(key, KEY_DOWN))) {
+                     
+                     uint8_t type = motors[motor_selected].getType();
+                     uicore_changeValueUByte(&type, 1, 0, 1, true);   
+                     motors[motor_selected].setType(type);        
+                     
+                     // set the flag that settings were changed
+                     sd_setSettingsChangedFlag();          
+                   } 
+      
+      
+                   if (motors[motor_selected].getType() == TYPE_LINEAR) {
+                     strcpy(data_line, string_14_short);  // LINEAR
+                   } else {
+                     strcpy(data_line, string_15_short);  // RADIAL                     
+                   }
+				     break; 
+ 
+    } 
+                       
+
+    case 244 :  {
+                if (menu_editing) {
+                  strcpy(data_line, string_22_short);
+                 strcpy(data_line, string_22_short); 
+                }
+				break; 
+ 
+    }    
+    case 249 :  {
+                if (menu_editing) {
+                  strcpy(data_line, string_5_short);
+                 strcpy(data_line, string_5_short); 
+                }
+				break; 
+ 
+    }   
+    case 250 :  {
+                if (menu_editing) {
+                  strcpy(data_line, string_5_short);
+                 strcpy(data_line, string_5_short); 
+                }
+				break; 
+ 
+    }     
+    case 251 :  {
+                if (menu_editing) {
+                  strcpy(data_line, string_251_short);
+                 strcpy(data_line, string_251_long); 
+                }
+				break; 
+ 
+    }     
+    case 238 :  {
+                if (menu_editing) {
+                  strcpy(data_line, string_238_short);
+                 strcpy(data_line, string_238_long); 
+                }
+				break; 
+ 
+    }  
+    case 245 :  {
+                if (menu_editing) {
+                  strcpy(data_line, string_245_short);
+                 strcpy(data_line, string_245_long); 
+                }
+				break; 
+ 
+    }      
+    case 246 :  {
+                if (menu_editing) {
+                  strcpy(data_line, string_246_short);
+                 strcpy(data_line, string_246_long); 
+                }
+				break; 
+ 
+    }      
+    case 247 :  {
+                if (menu_editing) {
+                  strcpy(data_line, string_247_short);
+                 strcpy(data_line, string_247_long); 
+                }
+				break; 
+ 
+    }  
+    case 248 :  {
+                if (menu_editing) {
+                  strcpy(data_line, string_248_short);
+                 strcpy(data_line, string_248_long); 
+                }
+				break; 
+ 
+    }           
     
            
   }
@@ -2651,119 +2777,11 @@ boolean uicode_doAction(uint16_t line_code) {
                      return false; 
                    }
                    
-    }               
-     
-    //2015-02-11 CH Added Pano Mode Options 
-    case 242 : {
-                  if (menu_editing) {
-                    
-                    if (isBit(key, KEY_UP)) {
-                      
-                     if      (isBit(pano_mode, PANO_MODE_AUTO))   pano_mode = PANO_MODE_MAN; 
-                     else if (isBit(pano_mode, PANO_MODE_MAN))       pano_mode = PANO_MODE_AUTO;                                                                   
-                    }
-                   
-                    if (isBit(key, KEY_DOWN)) {
-                      
-                      if      (isBit(core_mode, PANO_MODE_AUTO))   pano_mode = PANO_MODE_MAN; 
-                      else if (isBit(core_mode, PANO_MODE_MAN))       pano_mode = PANO_MODE_AUTO;                       
-                    }
-                                             
-                    sd_setSettingsChangedFlag();  
-                                        
-                    // show the long strings when in editing mode
-                    if      (isBit(pano_mode, PANO_MODE_AUTO)) strcpy(data_line, string_240_long);
-                    else if (isBit(pano_mode, PANO_MODE_MAN))     strcpy(data_line, string_241_long);
-                    
-                  } else {
-                   
-                   // show the short strings when in editing mode 
-                   if      (isBit(pano_mode, PANO_MODE_AUTO)) strcpy(data_line, string_240_short);
-                   else if (isBit(pano_mode, PANO_MODE_MAN))     strcpy(data_line, string_241_short);                     
-                  }
-                  
-                  
-                  
-                  break;
+					break;
             
     }
 
-    case 243 :  { 
-                if ((menu_editing) &&
-                       (isBit(key, KEY_UP) || isBit(key, KEY_DOWN))) {
-                     
-                     uint8_t type = motors[motor_selected].getType();
-                     uicore_changeValueUByte(&type, 1, 0, 1, true);   
-                     motors[motor_selected].setType(type);        
-                     
-                     // set the flag that settings were changed
-                     sd_setSettingsChangedFlag();          
-                   } 
-      
-      
-                   if (motors[motor_selected].getType() == TYPE_LINEAR) {
-                     strcpy(data_line, string_14_short);  // LINEAR
-                   } else {
-                     strcpy(data_line, string_15_short);  // RADIAL                     
-                   }
-                break; 
- 
-    }                   
-
-    case 244 :  {
-                if (menu_editing) {
-                  strcpy(data_line, string_22_short);
-                 strcpy(data_line, string_22_short); 
-                }
-    }    
-    case 249 :  {
-                if (menu_editing) {
-                  strcpy(data_line, string_5_short);
-                 strcpy(data_line, string_5_short); 
-                }
-    }  
-    case 250 :  {
-                if (menu_editing) {
-                  strcpy(data_line, string_5_short);
-                 strcpy(data_line, string_5_short); 
-                }
-    }    
-    case 251 :  {
-                if (menu_editing) {
-                  strcpy(data_line, string_251_short);
-                 strcpy(data_line, string_251_long); 
-                }
-    }    
-    case 238 :  {
-                if (menu_editing) {
-                  strcpy(data_line, string_238_short);
-                 strcpy(data_line, string_238_long); 
-                }
-    } 
-    case 245 :  {
-                if (menu_editing) {
-                  strcpy(data_line, string_245_short);
-                 strcpy(data_line, string_245_long); 
-                }
-    }     
-    case 246 :  {
-                if (menu_editing) {
-                  strcpy(data_line, string_246_short);
-                 strcpy(data_line, string_246_long); 
-                }
-    }     
-    case 247 :  {
-                if (menu_editing) {
-                  strcpy(data_line, string_247_short);
-                 strcpy(data_line, string_247_long); 
-                }
-    } 
-    case 248 :  {
-                if (menu_editing) {
-                  strcpy(data_line, string_248_short);
-                 strcpy(data_line, string_248_long); 
-                }
-    }     
+    
   } // end: switch  
 
 

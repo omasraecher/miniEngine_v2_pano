@@ -1,12 +1,37 @@
+/*
+
+    Author: Airic Lenz & Sascha Henke
+    
+    See www.airiclenz.com for more information
+    
+    The 1st version of this code, dealing with core functionalities, 
+    was heavily inspired by the OpenMoCo Engine by C.A. Church
+    and is basically based on it. Thank you for your great work! 
+        
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
 ////////////////////////////////////////////////////////
-// Language File 
+// Language File                                      //
 ////////////////////////////////////////////////////////
-// Please feel free to add your language. 
-// Please note that you only edit the text 
-// between the quotation marks
+// Please feel free to add your language.             //
+// Please copy the part from begining to the of a     //
+// language. And please note that you only edit the   //
+// text between the quotation marks                   // 
 ////////////////////////////////////////////////////////
-// Enable or disable a language by add or remove 
-// the "/*" before and the "*/" after your language
+// Enable your language by editing the                //
+// miniEngine2.ino file in line 68-70.                //
 ////////////////////////////////////////////////////////
 
 
@@ -14,7 +39,7 @@
 
 ////////////////////////////////////////////////////////
 //                                                    //
-//  E N G L I S H                          	      //
+//  E N G L I S H                          	          //
 //                                                    //
 ////////////////////////////////////////////////////////            
 
@@ -57,25 +82,17 @@ const char* string_28_short  = "Battery";
 // SYSTEM MODES
 
 const char* string_30_short = "SMS";
-
-
 const char* string_31_short = "Cont.";
+
 const char* string_30_long = "Shoot-Move-Shoot";
-
-
-
-
-
-
-
-
-
-
 const char* string_31_long = "Continuous";
+
 const char* string_50_short = "Run";
 const char* string_51_short = "Keyfrm.";
+
 const char* string_50_long = "Run based setup";
 const char* string_51_long = "Keyframes";
+
 const char* string_60_short = "Timelapse";
 const char* string_61_short = "Video";
 const char* string_62_short = "Panorama";
@@ -108,18 +125,21 @@ const char* string_94_short = "CAM";
 const char* string_95_short = "MOT";  
 const char* string_96_short = "DCH";  
 const char* string_97_short = "TRG";  
-
-
-
-
-
 const char* string_98_short = "Battery:"; 
+const char* string_99_short = "PAN";  
+
+
+
+
+
+
 const char* string_93_long = "       General";  
 
 const char* string_94_long = "        Camera";  
 const char* string_95_long = "        Motors";  
 const char* string_96_long = "Daisy Chaining";  
 const char* string_97_long = "      Triggers";  
+const char* string_99_long = "      Panorama";  
 
 
 ////////////////////////////////////////////////////////
@@ -297,7 +317,11 @@ const char* string_232_long = "done in real-speed...";
 
 
 #endif 
-
+////////////////////////////////////////////////////////
+//                                                    //
+//  E N D        E N G L I S H             	          //
+//                                                    //
+//////////////////////////////////////////////////////// 
 
 
 
@@ -395,7 +419,8 @@ const char* string_94_long = "        Kamera";
 const char* string_95_long = "        Motors";  
 const char* string_96_long = "    Verkettung";  
 const char* string_97_long = "      Triggers";  
-const char* string_99_long= "       Panorama";  
+const char* string_99_long = "      Panorama";  
+
 
 ////////////////////////////////////////////////////////
 // SETTINGS GENERAL
@@ -409,17 +434,17 @@ const char* string_106_short = "Deflt Einst.";
 const char* string_107_short = "Begin Start";
 const char* string_108_short = "Art";
 const char* string_109_short = "Setup Art";
-const char* string_110_short = "Menue Schrift";
+const char* string_110_short = "Men Schrift";
 const char* string_111_short = "Beweg. Art";
 const char* string_112_short = "Zuruecksetzen";
 
 
-const char* string_100_long  = "Helligkeit des Hintergrundlichts.\nEinstellungen ueber 100% sind ueber\n5V und ueber den Spezifikationen von dem\n Display (Uebersteuern)!";
-const char* string_101_long  = "Zeit nach der das Hintergrundlicht\n aus geht.";
-const char* string_102_long  = "Das Grundfarbschema.\nBenutze dies\n um die Lesbarkeit des Displays\nsicherzustellen.";
+const char* string_100_long  = "Helligkeit des Hintergrundlichts.\nEinstellungen ueber 100% sind ueber\n5V und ueber den Spezifikationen von\ndem Display (Uebersteuern)!";
+const char* string_101_long  = "Zeit nach der das Hintergrundlicht\naus geht.";
+const char* string_102_long  = "Das Grundfarbschema.\nBenutze dies um die\nLesbarkeit des Displays\nsicherzustellen.";
 const char* string_103_long  = "Dreht die Richtung des\nDrehknopfs um.";
-const char* string_107_long  = "Bewege alle Motoren zu Startposition\n bevor das Programm startet.\nDies hat nur Auswirkung auf \nmanuelle Programme.";
-const char* string_108_long  = "Die Richtung in der sich der Motor bewegt.";
+const char* string_107_long  = "Bewege alle Motoren zu Startposition\nbevor das Programm startet.\nDies hat nur Auswirkung auf \nmanuelle Programme.";
+const char* string_108_long  = "Die Aufnahmeart\nTimelapse oder Video.";
 
 const char* string_109_long  = "Die Art der Bewegungen sind\ndefiniert 'Software' benoetigt\neine Verbindung zu einem Computer!";
 const char* string_110_long  = "Die Schriftart die benutzt werden soll";
@@ -437,8 +462,8 @@ const char* string_121_short = "Test Ausl.";
 const char* string_122_short = "Verzoe. n. Ausl.";
 const char* string_123_short = "Ausloesen!";
 
-const char* string_120_long  = "Kamera Ausloeser Verhalten.";
-const char* string_122_long  = "Zeit nach dem Ausloesen\nbevor der Motor sich bewegt.\Benutze dies wenn du\n eine lange Ausloesezeit definiert hast\n fuer deine Kamera.";
+const char* string_120_long  = "Kamera Hersteller.";
+const char* string_122_long  = "Zeit nach dem Ausloesen\nbevor der Motor sich bewegt.\nBenutze dies wenn du\n eine lange Ausloesezeit definiert hast\n fuer deine Kamera.";
 
 
 ////////////////////////////////////////////////////////
@@ -454,8 +479,8 @@ const char* string_147_short = "Endschalter";
 const char* string_148_short = "Beweg Motor 1"; 
 const char* string_149_short = "Beweg Motor 2"; 
 const char* string_150_short = "Halte Strom"; 
-const char* string_151_short = "Ausrichtung"; 
-const char* string_152_short = "Gehe zu Start(alle)";  
+const char* string_151_short = "Kalibrierung"; 
+const char* string_152_short = "Zum Start(alle)";  
 const char* string_153_short = "Motor ";  
 const char* string_154_short = "Motr Schlaf";
 const char* string_155_short = "Beweg umkehr";
@@ -466,17 +491,17 @@ const char* string_159_short = "Setze!";
 const char* string_160_short = "Vorschau";
 const char* string_161_short = "Ueberpr Geschw";
 
-const char* string_140_long  = "Waehle den Motor aus.";
+const char* string_140_long  = "Waehle den zu bearbeitenden\nMotor aus.";
 
-const char* string_143_long  = "Zeitverzoegerung nach der Motor Bewegung.\n Benutze diese Einstellung um den\nMotor sich beruhigen zu lassen,\nnach der Bewegung.";
-const char* string_144_long  = "Die Art wie der Motor sich bewegt\n(linear oder radial.";
-const char* string_145_long  = "Maximale Geschwindigkeit des Motors.\n Druecke [Menue] um die Granularitaet zu aendern.";
-const char* string_146_long  = "Rampen Dauer fuer Bewegungen.\n Kuerzere Zeiten bedeuten schnellere\n Bewegung aber dafuer weniger sanft.";
-const char* string_150_long  = "Motor unter Strom halten.\n Wenn aktiviert bekommt der Motor sofort Strom.";
-const char* string_151_long  = "Motor und Hardware Kalibrierung\n in steps pro cm oder\n steps pro `.\nDruecke [Menue] um die Granularitaet zu aendern.";
-const char* string_154_long  = "Schaltet den Motor aus\nwenn er nicht benutzt wird(Auch bei Aufnahme!).";
+const char* string_143_long  = "Zeitverzoegerung nach der Motor\nBewegung. Benutze diese Einstellung\n um den Motor sich beruhigen zu\nlassen, nach der Bewegung.";
+const char* string_144_long  = "Die Art wie der Motor sich bewegt\n(linear oder radial).";
+const char* string_145_long  = "Maximale Geschwindigkeit des Motors.\nDruecke [Menue]\num die Granularitaet zu aendern.";
+const char* string_146_long  = "Rampen Dauer fuer Bewegungen.\nKuerzere Zeiten bedeuten schnellere\nBewegung aber dafuer weniger sanft.";
+const char* string_150_long  = "Motor unter Strom halten.\nWenn aktiviert bekommt der Motor\nsofort Strom.";
+const char* string_151_long  = "Motor und Hardware Kalibrierung in\nsteps pro cm oder steps pro Grad.\nDruecke [Menue]\num die Granularitaet zu aendern.";
+const char* string_154_long  = "Schaltet den Motor aus\nwenn er nicht benutzt wird\n(Auch bei Aufnahme!).";
 const char* string_155_long  = "Dreht die Motor Drehrichtung um.";
-const char* string_161_long  = "Prueft die max. Geschwindigkeit\n fuer diesen Motor.\n Achtung:Abschalten\n dieser Funktion kann dein System\n beschaedigen.";
+const char* string_161_long  = "Prueft die max. Geschwindigkeit fuer\ndiesen Motor.\nAchtung:Abschalten\ndieser Funktion kann dein System\nbeschaedigen.";
 
 ////////////////////////////////////////////////////////
 // SETTINGS CHAIN
@@ -493,10 +518,10 @@ const char* string_185_short = "Anstei.";
 const char* string_186_short = "Abfall.";
 const char* string_187_short = "Glaetten";
 
-const char* string_180_long  = "Waehle den Trigger den du\n bearbeiten moechtest.";
+const char* string_180_long  = "Waehle den Trigger den du\nbearbeiten moechtest.";
 const char* string_181_long  = "Status des Triggers - An / Aus.";
-const char* string_182_long  = "Dies definiert die Aktion die \n ausgefuehrt werden soll,\n wenn der Trigger angetriggert wird.\n Stop  = Stop das Program\nShoot = Trigger die Kamera";
-const char* string_183_long  = "Der aktuelle Signaltyp worauf dieser\n Trigger wartet.\nAnsteigendes Signal (0V --> 3.3V)\nAbfallendes Signal (3.3V --> 0V)"; 
+const char* string_182_long  = "Dies definiert die Aktion die\nausgefuehrt werden soll, wenn der\nTrigger angetriggert wird.\nStop  = Stop das Program\nShoot = Trigger die Kamera";
+const char* string_183_long  = "Der aktuelle Signaltyp worauf dieser\nTrigger wartet.\nAnsteigendes Signal (0V --> 3.3V)\nAbfallendes  Signal (3.3V --> 0V)"; 
 const char* string_187_long  = "Glaettet das Trigger Signal via\nSoftware wenn eingeschaltet.";
 
 // 2015-02-11 CH Add text for pano settings
@@ -526,27 +551,27 @@ const char* string_236_short = "HorzMot";
 const char* string_235_short = "Cropfac. Wert?";
 
 
-const char* string_240_long = "Automatischer Modus\n 180° vertikal 360° Horizontal\incl. Nadir und Zenith\n Start ist Nadir";
-const char* string_241_long = "Manueller Modus\n alle Setting müssen von Hand gemacht werden.";
-const char* string_242_long = "Panorama Modus Auto oder Manuell";
-const char* string_243_long = "Vertikaler Winkel\n der abgefahren werden soll.";
-const char* string_244_long = "Horizontaler Winkel\n der abgefahren werden soll.";
-const char* string_245_long = "Focus Laenge\n Empfehlung ist Festbrennweite\nansonsten mach ein Testbild und schaue\n in die Exif Daten.";
-const char* string_246_long = "Panorama Aufnahme Modus\n Mosaik oder Normal";
-const char* string_247_long = "Drehrichtung\nVertikaler Motor\n Im oder gegen den Uhrzeigersinn.";
-const char* string_248_long = "Drehrichtung\nHorizontaler Motor\n Im oder gegen den Uhrzeigersinn.";
-const char* string_249_long = "CCD Breite\ngemessen wir diese im Querformat\n und ist groesser als die Hoehe";
-const char* string_250_long = "CCD Hoehe\n gemessen wird diese im Querformat\n und ist kleiner als die Breite.";
-const char* string_251_long = "Kamera Ausrichtung\n wie ist deine Kamera montiert.";
-const char* string_252_long = "Ausrichtung der Kamera\n auf deinem Panokopf ist\ Portrait\n also Hochformat";
-const char* string_253_long = "Normaler Pano Modus\nDas Panorama wird Zeilenweise\n abgefahren.";
-const char* string_254_long = "Mosaik\nDas Panorama wird Spaltenweise\n abgefahren, nicht\n Zeilenweise.";
+const char* string_240_long = "Automatischer Modus\n180 vertikal 360 Horizontal\nincl. Nadir und Zenith\n Start ist Nadir";
+const char* string_241_long = "Manueller Modus\nalle Setting müssen von\nHand gemacht werden.";
+const char* string_242_long = "Panorama Modus\nAuto oder Manuell";
+const char* string_243_long = "Vertikaler Winkel\nder abgefahren werden soll.";
+const char* string_244_long = "Horizontaler Winkel\nder abgefahren werden soll.";
+const char* string_245_long = "Focus Laenge\nEmpfehlung ist Festbrennweite\nansonsten mach ein Testbild und schaue\nin die Exif Daten.";
+const char* string_246_long = "Panorama Aufnahme Modus\nMosaik oder Normal";
+const char* string_247_long = "Drehrichtung\nVertikaler Motor\nim oder gegen den Uhrzeigersinn.";
+const char* string_248_long = "Drehrichtung\nHorizontaler Motor\nim oder gegen den Uhrzeigersinn.";
+const char* string_249_long = "CCD Breite\ngemessen wird diese im Querformat\nund ist groesser als die Hoehe";
+const char* string_250_long = "CCD Hoehe \ngemessen wird diese im Querformat\nund ist kleiner als die Breite.";
+const char* string_251_long = "Kamera Ausrichtung\nwie ist deine Kamera montiert.";
+const char* string_252_long = "Ausrichtung der Kamera\nauf deinem Panokopf ist\nPortrait\n also Hochformat";
+const char* string_253_long = "Normaler Pano Modus\nDas Panorama wird Zeilenweise\nabgefahren.";
+const char* string_254_long = "Mosaik\nDas Panorama wird Spaltenweise\nabgefahren, nicht\nZeilenweise.";
 const char* string_255_long = "Millimeter";
-const char* string_239_long = "Ausrichtung der Kamera\n auf deinem Panokopf ist\ Landscape\n also Querformat";
-const char* string_238_long = "Cropfaktor deiner Kamera\n z.B. Canon 1.6\n oder Nikon 1.5";
+const char* string_239_long = "Ausrichtung der Kamera\nauf deinem Panokopf ist\nLandscape\nalso Querformat";
+const char* string_238_long = "Cropfaktor deiner Kamera\nz.B. Canon 1.6\noder Nikon 1.5";
 const char* string_237_long = "Horizontaler Motor";
 const char* string_236_long = "Vertikaler Motor";
-const char* string_235_long = "Wert des Cropfaktor ";
+const char* string_235_long = "Wert des Cropfaktor";
 
 ////////////////////////////////////////////////////////
 // mode settings
@@ -556,20 +581,20 @@ const char* string_201_short = "Richtung";
 const char* string_202_short = "Ausloesezeit";  
 const char* string_203_short = "Aufn. Zeit";  
 const char* string_204_short = "Wiederg. Zeit";
-const char* string_205_short = "Bilder pro Sek";
+const char* string_205_short = "Bilder p. Sek";
 const char* string_206_short = "Ramp Rein";
 const char* string_207_short = "Ramp Raus";
 
 
 
-const char* string_200_long = "Die Gesamtstrecke des Motors\nwaehrend der Aufnahme.\nDruecke [Menue] um die \nGranularitaet zu aendern.";
+const char* string_200_long = "Die Gesamtstrecke des Motors\nwaehrend der Aufnahme.\nDruecke [Menue]\num die Granularitaet zu aendern.";
 const char* string_201_long = "Die Motor Drehrichtung.";
-const char* string_202_long = "Die Kamera Ausloesezeit. Diese kann \nvon 1/10 nur zum Ausloesen der \nKamera betragen. Die wirkliche Ausloesezeit\nwird in der Kamera definiert (siehen ebenso \nKamera Verzoegerung nach Ausloesung)";
+const char* string_202_long = "Die Kamera Ausloesezeit. Diese kann \nvon 1/10 nur zum Ausloesen der \nKamera betragen. Die wirkliche Ausloese-\nzeit wird in der Kamera definiert (siehe\nebenso Kamera Verzoegerung\nnach Ausloesung)";
 const char* string_203_long = "Die Gesamtaufnahmezeit.";
-const char* string_204_long = "Die Laenge des Clips der erstellt werden soll.";
-const char* string_205_long = "Frames pro Sekunde vom finalen Clip.\nDies beeinflusst wieviele Fotos\n gemacht werden.";
-const char* string_206_long = "Prozent der Aufnahmezeit\n fuer die Rampe rein.";
-const char* string_207_long = "Prozent der Aufnahmezeit\n fuer die Rampe raus.";
+const char* string_204_long = "Die Laenge des Clips der\nerstellt werden soll.";
+const char* string_205_long = "Bilder pro Sekunde vom finalen Clip.\nDies beeinflusst wieviele Fotos\ninsgesamt gemacht werden.";
+const char* string_206_long = "Prozent der Aufnahmezeit\nfuer die Rampe rein.";
+const char* string_207_long = "Prozent der Aufnahmezeit\nfuer die Rampe raus.";
 
 
 
@@ -584,11 +609,18 @@ const char* string_222_long = "Druecke [SELECT] um abzubrechen.";
 const char* string_225_long = "Start";
 const char* string_226_long = "Bewege Motoren zur Startposition.";
 
-const char* string_227_long = "Geschwindigkeits Warnung";
-const char* string_228_long = "Motor Geschwindigkeitslimit fuer mindestens einen";
-const char* string_229_long = "Motor ueberschritten fuer diese Bewegung!";
+const char* string_227_long = "Geschw. Warnung";
+const char* string_228_long = "Geschwindigkeitslimit fuer min. 1";
+const char* string_229_long = "Motor ueberschritten!";
 
 const char* string_230_long = "Vorschau";
 const char* string_231_long = "Die Timelpase Vorschau wurde nun ";
 const char* string_232_long = "gemacht in Echtzeit...";
 #endif
+
+
+////////////////////////////////////////////////////////
+//                                                    //
+//  E N D        G E R M A N             	          //
+//                                                    //
+//////////////////////////////////////////////////////// 
