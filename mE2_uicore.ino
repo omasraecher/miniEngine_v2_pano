@@ -2470,27 +2470,33 @@ void uicore_generateDataString(uint16_t line_code) {
  
     } 
                   
-    case 243 :  { 
-					if ((menu_editing) &&
-                       (isBit(key, KEY_UP) || isBit(key, KEY_DOWN))) {
+    case 243 :   {
+                   if (menu_editing) {
                      
-                     uint8_t type = motors[motor_selected].getType();
-                     uicore_changeValueUByte(&type, 1, 0, 1, true);   
-                     motors[motor_selected].setType(type);        
+                     uicore_changeValueFloat(&motor_total_distance[motor_selected], 
+                                             ((float)rotary.getLowVelocity() / (float) edit_granularity),
+                                             0.0, 
+                                             65000.0); 
                      
                      // set the flag that settings were changed
-                     sd_setSettingsChangedFlag();          
-                   } 
-      
-      
-                   if (motors[motor_selected].getType() == TYPE_LINEAR) {
-                     strcpy(data_line, string_14_short);  // LINEAR
+                     sd_setSettingsChangedFlag();
+                     
+                                          
+                     if      (edit_granularity ==   1) sprintf(data_line, "%.0f", motor_total_distance[motor_selected]);  
+                     else if (edit_granularity ==  10) sprintf(data_line, "%.1f", motor_total_distance[motor_selected]);  
+                     else if (edit_granularity == 100) sprintf(data_line, "%.2f", motor_total_distance[motor_selected]);  
+                   
                    } else {
-                     strcpy(data_line, string_15_short);  // RADIAL                     
-                   }
-				     break; 
- 
-    } 
+                     sprintf(data_line,"%.1f", motor_total_distance[motor_selected]);
+                   }         
+                        
+                   
+                   if (motors[motor_selected].getType() == TYPE_RADIAL) {
+						strcat(data_line, string_22_short); // °
+                   } 
+                     
+                   break; 
+    }    
                        
 
     case 244 :  {
@@ -2517,14 +2523,7 @@ void uicore_generateDataString(uint16_t line_code) {
 				break; 
  
     }     
-    case 251 :  {
-                if (menu_editing) {
-                  strcpy(data_line, string_251_short);
-                 strcpy(data_line, string_251_long); 
-                }
-				break; 
- 
-    }     
+      
     case 238 :  {
                 if (menu_editing) {
                   strcpy(data_line, string_238_short);
@@ -2565,7 +2564,28 @@ void uicore_generateDataString(uint16_t line_code) {
 				break; 
  
     }           
-    
+   
+	case 251 : 	{
+                   if ((menu_editing) &&
+                       (isBit(key, KEY_UP) || isBit(key, KEY_DOWN))) {
+                     // toggle between Landscape & Portrait
+                     cam_toggleCameraOrientation();  
+                 
+                     sd_setSettingsChangedFlag();      
+                   }
+                   
+                   // Landscape
+                   if (cam_isCameraOrientation()) {
+                     strcpy(data_line, string_239_short);
+                   } 
+                   // Portrait
+                   else {
+                     strcpy(data_line, string_252_short);
+                   }
+                   
+                   break;
+                   
+    }   
            
   }
    

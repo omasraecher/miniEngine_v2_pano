@@ -34,7 +34,7 @@
 // B3 = 
 // B4 = 
 // B5 = 
-// B6 = 
+// B6 = camer orientation
 // B7 = camera type
 uint8_t cam_status = B0;
 
@@ -101,6 +101,8 @@ void    cam_deletePostDelayActiveFlag()  { deleteBit(cam_status, BIT_1); }
 void    cam_toggleCameraType()           { toggleBit(cam_status, BIT_7); }  
 boolean cam_isCameraType()               { return isBit(cam_status, BIT_7); } 
 
+void    cam_toggleCameraOrientation()    { toggleBit(cam_status, BIT_6); }  
+boolean cam_isCameraOrientation()        { return isBit(cam_status, BIT_6); } 
 
 // ============================================================================
 boolean cam_isCameraWorking() {
