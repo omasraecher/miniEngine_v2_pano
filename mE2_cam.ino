@@ -34,7 +34,7 @@
 // B3 = 
 // B4 = 
 // B5 = 
-// B6 = camer orientation
+// B6 = camera orientation
 // B7 = camera type
 uint8_t cam_status = B0;
 
